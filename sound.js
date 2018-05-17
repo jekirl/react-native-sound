@@ -246,9 +246,7 @@ export default class Sound {
     resolve();
   })
 
-  setActive = (category, mixWithOthers = false) => new Promise((resolve, reject) => {
-    if (IsAndroid) reject();
-
+  setCategory = (category, mixWithOthers = false) => new Promise((resolve, reject) => {
     RNSound.setCategory(category, mixWithOthers);
 
     resolve();
